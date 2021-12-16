@@ -2,6 +2,6 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>copado__Template_OR_Execution_Is_Required</fullName>
     <active>true</active>
-    <errorConditionFormula>AND( ISBLANK( copado__JobTemplate__c ), ISBLANK(  copado__JobExecution__c  ),  ISBLANK( copado__UserStory__c )  )</errorConditionFormula>
-    <errorMessage>JobTemplate, Execution, or User Story is required</errorMessage>
+    <errorConditionFormula>AND( ISBLANK( copado__JobTemplate__c ), ISBLANK(  copado__JobExecution__c  ) )</errorConditionFormula>
+    <errorMessage>JobTemplate or Execution is required</errorMessage>
 </ValidationRule>

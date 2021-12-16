@@ -71,12 +71,12 @@
                 <div class="slds-card__body slds-card__body_inner">
                     <div class="slds-grid" style="margin-bottom:20px">
                         <div class="slds-col">
-                            <apex:outputPanel id="schedule">
+                            <apex:outputPanel >
                                 <apex:selectList id="if_schedule" value="{!copado__Deployment__c.copado__Schedule__c}" size="1" required="true" onchange="lockScreen();validateDate();" styleClass="js-estimation-schedule">
                                     <apex:selectOptions value="{!scheduleOptions}"/>
                                 </apex:selectList>
                                 <apex:inputField id="if_date" value="{!copado__Deployment__c.copado__Date__c}" rendered="{!showDateField}" />
-                                <apex:actionFunction name="validateDate" action="{!scheduleShowDate}" onComplete="unlockScreen();" rerender="schedule,if_date,messagesPanel"/>
+                                <apex:actionFunction name="validateDate" action="{!scheduleShowDate}" onComplete="unlockScreen();" rerender="if_date,messagesPanel"/>
                             </apex:outputPanel>
                         </div>
                     </div>

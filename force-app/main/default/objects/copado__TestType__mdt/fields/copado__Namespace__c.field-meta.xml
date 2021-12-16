@@ -4,7 +4,7 @@
     <deprecated>false</deprecated>
     <externalId>false</externalId>
     <fieldManageability>DeveloperControlled</fieldManageability>
-    <label>Deprecated - Namespace</label>
+    <label>Namespace</label>
     <length>255</length>
     <required>false</required>
     <type>Text</type>

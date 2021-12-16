@@ -3,15 +3,9 @@
     <fullName>copado__Git_Repository__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>BLANKVALUE(
-    copado__JobExecution__r.copado__Snapshot__r.copado__Git_Repository__c, 
-    BLANKVALUE(
-        copado__JobExecution__r.copado__Pipeline__r.copado__Git_Repository__c,
-        BLANKVALUE(
-            copado__JobExecution__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c, 
-            copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c
-        )
-    )
+    <formula>IF(NOT(ISBLANK(copado__JobExecution__r.copado__Promotion__c)),
+    copado__JobExecution__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c,
+    copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c
 )</formula>
     <label>Git Repository</label>
     <required>false</required>

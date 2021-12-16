@@ -99,6 +99,11 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>Clone</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>5</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>copado__Data_Set__c.copado__Generate_Data_Set</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
@@ -122,11 +127,6 @@
             <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>4</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Clone</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>5</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList/>
