@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datetime_Deployed_To_Production__c</fullName>
+    <description>This will get filled in with the current datetime once this User Story has the &quot;Environment&quot; field filled in with the value &quot;Production&quot;. This will happen when the User Story is successfully deployed there. This is filled in by the process builder labeled &quot;Stop Indexing Metadata &amp; Mark &quot;Datetime Deployed&quot; Once User Story Reaches Production (Invocable)&quot;.</description>
+    <externalId>false</externalId>
+    <label>Datetime Deployed To Production</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

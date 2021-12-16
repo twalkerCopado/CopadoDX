@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compliance_Scan_Run</fullName>
+    <active>false</active>
+    <description>Looks at the &quot;Last Compliance Scan Date&quot; field to make sure a scan has been run.</description>
+    <errorConditionFormula>AND( 
+OR( 
+AND( 
+PRIORVALUE(copado__Promote_Change__c) = false, 
+copado__Promote_Change__c = true 
+), 
+AND( 
+PRIORVALUE(copado__Promote_and_Deploy__c) = false, 
+copado__Promote_and_Deploy__c = true 
+) 
+),
+ISBLANK( copado__Last_Compliance_Scan_Date__c )
+)</errorConditionFormula>
+    <errorMessage>Please run a compliance scan.</errorMessage>
+</ValidationRule>

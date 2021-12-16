@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compliance_Scan_Passed</fullName>
+    <active>false</active>
+    <description>Looks at the &quot;Compliance Highest Rule Violation&quot; field to make sure that it does not say &quot;Abort Process&quot;.</description>
+    <errorConditionFormula>AND( 
+OR( 
+AND( 
+PRIORVALUE(copado__Promote_Change__c) = false, 
+copado__Promote_Change__c = true 
+), 
+AND( 
+PRIORVALUE(copado__Promote_and_Deploy__c) = false, 
+copado__Promote_and_Deploy__c = true 
+) 
+), 
+OR(ISPICKVAL(copado__Compliance_Status__c , &quot;In Progress&quot;
+), ISPICKVAL(copado__Compliance_Status__c , &quot;Completed - Findings detected&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>This User Story contains critical compliance violations. Please view the related Scan Result for more details.</errorMessage>
+</ValidationRule>
