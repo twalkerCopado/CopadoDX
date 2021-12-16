@@ -132,11 +132,6 @@
         <isRequired>false</isRequired>
     </availableFields>
     <availableFields>
-        <field>copado__Git_Repository__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
         <field>copado__Has_Apex_Code__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
@@ -148,11 +143,6 @@
     </availableFields>
     <availableFields>
         <field>IsDeleted</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
-        <field>copado__Is_Bundle__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </availableFields>
@@ -198,11 +188,6 @@
     </availableFields>
     <availableFields>
         <field>copado__Legal__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
-        <field>copado__Manual_Step_Required__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </availableFields>

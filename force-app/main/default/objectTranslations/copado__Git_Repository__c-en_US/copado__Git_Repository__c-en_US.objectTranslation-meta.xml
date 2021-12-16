@@ -8,4 +8,18 @@
         <label><!-- Custom Fields --></label>
         <name>copado__CustomFields</name>
     </fieldSets>
+    <layouts>
+        <layout>Git Repository Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Git Server Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
 </CustomObjectTranslation>

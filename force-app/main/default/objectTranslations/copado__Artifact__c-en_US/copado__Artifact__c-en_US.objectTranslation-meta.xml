@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Artifact Layout</layout>
+        <sections>
+            <label><!-- Content --></label>
+            <section>Content</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Package Artifact Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Package Details --></label>
+            <section>Package Details</section>
+        </sections>
+        <sections>
+            <label><!-- Package Metadata Content --></label>
+            <section>Package Metadata Content</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Package Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Package Details --></label>
+            <section>Package Details</section>
+        </sections>
+        <sections>
+            <label><!-- Package Metadata Content --></label>
+            <section>Package Metadata Content</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>User Story Bundle</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
     <recordTypes>
         <description><!-- Version Control System centric package --></description>
         <label><!-- Git Package --></label>

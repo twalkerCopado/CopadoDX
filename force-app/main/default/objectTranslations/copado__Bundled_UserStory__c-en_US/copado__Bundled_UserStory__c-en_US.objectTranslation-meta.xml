@@ -4,4 +4,11 @@
         <label><!-- Bundle --></label>
         <name>copado__Bundle</name>
     </fieldSets>
+    <layouts>
+        <layout>Bundle User Story Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
 </CustomObjectTranslation>

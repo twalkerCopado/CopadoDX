@@ -5,12 +5,12 @@
     <externalId>false</externalId>
     <formula>IF(NOT(ISBLANK( copado__Deployment__c )), copado__Deployment__c, 
     IF(NOT(ISBLANK( copado__Promotion__c )), copado__Promotion__c, 
-        IF(NOT(ISBLANK( copado__UserStoryCommit__c )), copado__UserStoryCommit__c, 
-            IF(NOT(ISBLANK( copado__Snapshot__c )), copado__Snapshot__c,  copado__ParentRecord_Id__c)
+        IF(NOT(ISBLANK( copado__Commit__c )), copado__Commit__c, 
+            IF(NOT(ISBLANK( copado__Snapshot__c )), copado__Snapshot__c, null)
         )
     )
 )</formula>
-    <label>Parent Id(Formula)</label>
+    <label>Parent Id</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>

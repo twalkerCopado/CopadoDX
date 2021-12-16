@@ -3,18 +3,15 @@
     <fullName>copado__Pipeline_Id__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <formula>BLANKVALUE(
-copado__JobExecution__r.copado__Pipeline__c,
-BLANKVALUE(
-    copado__JobExecution__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c, 
-    BLANKVALUE(
-        copado__JobExecution__r.copado__Promotion__r.copado__Release__r.copado__Project__r.copado__Deployment_Flow__c,
-        BLANKVALUE(
-            copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c, 
-            copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Release__r.copado__Project__r.copado__Deployment_Flow__c
-        )
+    <formula>IF(NOT(ISBLANK(copado__JobExecution__r.copado__Promotion__c)),
+    IF(NOT(ISBLANK(copado__JobExecution__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c)),
+        copado__JobExecution__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c,
+        copado__JobExecution__r.copado__Promotion__r.copado__Release__r.copado__Project__r.copado__Deployment_Flow__c
+    ),
+    IF(NOT(ISBLANK(copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c)),
+        copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Project__r.copado__Deployment_Flow__c,
+        copado__JobExecution__r.copado__Deployment__r.copado__Promotion__r.copado__Release__r.copado__Project__r.copado__Deployment_Flow__c
     )
-)
 )</formula>
     <label>Pipeline Id</label>
     <required>false</required>

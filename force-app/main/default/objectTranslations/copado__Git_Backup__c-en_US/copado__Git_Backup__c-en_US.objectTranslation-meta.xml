@@ -20,6 +20,20 @@
         <label><!-- Snapshot Waiting Page --></label>
         <name>copado__Snapshot_Waiting_Page</name>
     </fieldSets>
+    <layouts>
+        <layout>Git Backup Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Git Snapshot Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <webLinks>
         <label><!-- Select_Branch --></label>
         <name>copado__Select_Branch</name>
