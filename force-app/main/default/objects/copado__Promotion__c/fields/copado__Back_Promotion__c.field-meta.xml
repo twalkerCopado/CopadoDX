@@ -5,7 +5,7 @@
     <deprecated>false</deprecated>
     <description>Checked if the promotion is from a higher environment to a lower environment in the deployment flow.</description>
     <externalId>false</externalId>
-    <label>Is Back-Promotion</label>
+    <label>Back Promotion</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>
 </CustomField>

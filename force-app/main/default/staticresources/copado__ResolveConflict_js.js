@@ -165,70 +165,62 @@ var conversionFunc = conversionFunc || {},
             $copado('[cType="' + currentMode + '"]').addClass('slds-button_brand');
         } else $copado('[cType="xml"]').addClass('slds-button_brand');
 
-        if (att2Res || (attSource.length > 0 && attTarget.length > 0) || (isRollback && preSourceRollback && preTargetRollback)) {
+        if (att2Res || (attSource.length > 0 && attTarget.length > 0)) {
             var attach = att2Res.length > 0 ? getAttachmentById(config.parentId, att2Res) : '';
             if (!attach && !bundleFlag) {
-                if (isRollback) {
-                    preSource = preSourceRollback;
-                    preTarget = preTargetRollback;
-                    if(preTarget && preTarget[0] === 'PREVIEW NOT AVAILABLE'){
-                        panes = 1;
-                    }
-                }
-                else{
-                    bundleSource = unzip_Decode(attSource);
-                    bundleTarget = unzip_Decode(attTarget);
-                    if ((bundleSource[1].length == 2 || (bundleSource[1].length == 3 && bundleSource[1][1].indexOf('meta.xml') > -1)) && !attach) {
-                        preSource[0] =
-                            Object.keys(bundleSource[0].files)[0] != 'package.xml'
-                                ? bundleSource[0].file(Object.keys(bundleSource[0].files)[0]).asText()
-                                : '';
-                        preSource[1] = bundleSource[1][0];
-                        preTarget[0] =
-                            Object.keys(bundleTarget[0].files)[0] != 'package.xml'
-                                ? bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0]).asText()
-                                : '';
-                        preTarget[1] = bundleTarget[1][0];
-                    } else {
-                        bundleFlag = true;
-                        modalOperations.showFileModal();
-                        $copado('.slds-modal__content#modal-content-id-1').prepend('<div id="fs2append"></div>');
+                bundleSource = unzip_Decode(attSource);
+                bundleTarget = unzip_Decode(attTarget);
+                if ((bundleSource[1].length == 2 || (bundleSource[1].length == 3 && bundleSource[1][1].indexOf('meta.xml') > -1)) && !attach) {
+                    preSource[0] =
+                        Object.keys(bundleSource[0].files)[0] != 'package.xml'
+                            ? bundleSource[0].file(Object.keys(bundleSource[0].files)[0]).asText()
+                            : '';
+                    preSource[1] = bundleSource[1][0];
+                    preTarget[0] =
+                        Object.keys(bundleTarget[0].files)[0] != 'package.xml'
+                            ? bundleTarget[0].file(Object.keys(bundleTarget[0].files)[0]).asText()
+                            : '';
+                    preTarget[1] = bundleTarget[1][0];
+                } else {
+                    bundleFlag = true;
+                    modalOperations.showFileModal();
+                    $copado('.slds-modal__content#modal-content-id-1').prepend('<div id="fs2append"></div>');
 
-                        for (var i = 0; i < bundleSource[1].length; i++) {
-                            if (bundleSource[1][i].toLowerCase() != 'package.xml') {
-                                /*used single quotes instead of ` since VF acts weird and puts js code directly to the page as visible*/
-                                $copado('[id="fs2append"]').append(
-                                    '<div class="slds-card__header slds-grid" style="padding: 0 0 0 0;margin: 0 0 .15rem;"><header style="color:black !important;' +
-                                        (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
-                                            ? 'background-color: #f4f7fa !important;'
-                                            : 'background-color: #FFF !important;') +
-                                        '" class="rectangle slds-media slds-media_center slds-has-flexi-truncate"><div class="slds-media__body"><h2><span style="margin-left: 1%;" class="slds-text-heading_small aura-bundle-page-template">' +
-                                        bundleSource[1][i] +
-                                        '</span></h2></div>' +
-                                        (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
-                                            ? '<div class="aura-bundle-view-button slds-no-flex"><div class="slds-form-element__control"><div class="slds-radio_button-group"><span class="slds-button slds-radio_button" onclick="modalOperations.renderBundleSelection(\'' +
-                                            bundleSource[1][i] +
-                                            '\');"><input id="autoResolveButton-' +
-                                            i +
-                                            '" name="radio-' +
-                                            i +
-                                            '"  type="radio" value="on"><label class="slds-radio_button__label slds-button slds-button_neutral" for="autoResolveButton-' +
-                                            i +
-                                            '"><span class="slds-radio_faux" >' +
-                                            viewDifferences +
-                                            '</span></label></span></div> </div></div>'
-                                            : '<a href="#" onclick="modalOperations.renderBundleSelection(\'' +
-                                            bundleSource[1][i] +
-                                            '\');">' +
-                                            viewFile +
-                                            '</a>') +
-                                        '</header></div><div class="slds-card__body"></div><footer class="slds-card__footer"></footer>'
-                                );
-                            }
+                    for (var i = 0; i < bundleSource[1].length; i++) {
+                        if (bundleSource[1][i].toLowerCase() != 'package.xml') {
+                            /*used single quotes instead of ` since VF acts weird and puts js code directly to the page as visible*/
+                            $copado('[id="fs2append"]').append(
+                                '<div class="slds-card__header slds-grid" style="padding: 0 0 0 0;margin: 0 0 .15rem;"><header style="color:black !important;' +
+                                    (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
+                                        ? 'background-color: #f4f7fa !important;'
+                                        : 'background-color: #FFF !important;') +
+                                    '" class="rectangle slds-media slds-media_center slds-has-flexi-truncate"><div class="slds-media__body"><h2><span style="margin-left: 1%;" class="slds-text-heading_small aura-bundle-page-template">' +
+                                    bundleSource[1][i] +
+                                    '</span></h2></div>' +
+                                    (bundleSource[0].file(bundleSource[1][i]).asText() != bundleTarget[0].file(bundleSource[1][i]).asText()
+                                        ? '<div class="aura-bundle-view-button slds-no-flex"><div class="slds-form-element__control"><div class="slds-radio_button-group"><span class="slds-button slds-radio_button" onclick="modalOperations.renderBundleSelection(\'' +
+                                          bundleSource[1][i] +
+                                          '\');"><input id="autoResolveButton-' +
+                                          i +
+                                          '" name="radio-' +
+                                          i +
+                                          '"  type="radio" value="on"><label class="slds-radio_button__label slds-button slds-button_neutral" for="autoResolveButton-' +
+                                          i +
+                                          '"><span class="slds-radio_faux" >' +
+                                          viewDifferences +
+                                          '</span></label></span></div> </div></div>'
+                                        : '<a href="#" onclick="modalOperations.renderBundleSelection(\'' +
+                                          bundleSource[1][i] +
+                                          '\');">' +
+                                          viewFile +
+                                          '</a>') +
+                                    '</header></div><div class="slds-card__body"></div><footer class="slds-card__footer"></footer>'
+                            );
                         }
-                        returnFlag = true;
                     }
+                    returnFlag = true;
                 }
+
                 preFlag = true;
             }
             if (((attach && attach.Body.length > 0) || preFlag) && !returnFlag) {
@@ -398,13 +390,8 @@ var conversionFunc = conversionFunc || {},
                 }
             }
             usName = val.slice(val.indexOf('>>>>>>>'), val.indexOf(usName) + usName.length); //'>>>>>>> feature/'+usName;
-            
-            var usNameWithMultiLineBreaks = val.match(usName + '(\r\n)');
-            var usNameWithLineBreaks = usNameWithMultiLineBreaks ? usName+ '\r\n' : usName+ val.charAt(val.indexOf(usName) + usName.length);
-            
             while (val.indexOf(usName) > -1 && usName && usName.length > 0) {
-                // find a new line character either \r or \n and append to the end to truncate the values
-                val = (val.slice(0, val.indexOf('=======')) + val.slice(val.indexOf(usName) + usNameWithLineBreaks.length, val.length)).replace(/<<<<<<< HEAD(\r\n|\n|\r)/, '');
+                val = (val.slice(0, val.indexOf('=======')) + val.slice(val.indexOf(usName) + (usName+'\n').length, val.length)).replace('<<<<<<< HEAD\n', '');
             }
 
             var returnVal = format == 'json' ? conversionFunc.json2yaml(parseOperations.convertXml2formattedJSON(val)) : val;
@@ -417,15 +404,11 @@ var conversionFunc = conversionFunc || {},
                     val = val.replace(/(^[ \t]*\n)/gm, '');
                 }
             }
-            var usRegex = new RegExp(usName + '(\r\n|\n|\r)');
-            
-            var multiLineBreaks = val.match('=======' + '(\r\n)');
-            var conflictSperatorLineBreaks = multiLineBreaks ? '======='+ '\r\n' : '======='+ val.charAt(val.indexOf(usName) + usName.length);
-            
             while (val.indexOf(usName) > -1 && val.indexOf('<<<<<<< HEAD') > -1) {
-                // find a new line character either \r or \n and append to the end to truncate the values
-                val = val.slice(0, val.indexOf('<<<<<<< HEAD')) + val.slice(val.indexOf('=======') + conflictSperatorLineBreaks.length, val.length);
-                val = val.replace(usRegex, '');
+                val = (val.slice(0, val.indexOf('<<<<<<< HEAD\n')) + val.slice(val.indexOf('=======') + '=======\n'.length, val.length)).replace(
+                    usName+'\n',
+                    ''
+                );
             }
             var returnVal = format == 'json' ? conversionFunc.json2yaml(parseOperations.convertXml2formattedJSON(val)) : val;
             return unicodeReplacer(returnVal);

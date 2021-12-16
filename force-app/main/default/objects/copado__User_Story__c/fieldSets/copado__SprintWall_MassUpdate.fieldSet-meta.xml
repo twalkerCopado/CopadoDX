@@ -67,6 +67,11 @@
         <isRequired>false</isRequired>
     </availableFields>
     <availableFields>
+        <field>CreatedById</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </availableFields>
+    <availableFields>
         <field>CreatedDate</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
@@ -78,11 +83,6 @@
     </availableFields>
     <availableFields>
         <field>copado__Documentation_Complete__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
-        <field>copado__Environment_Type__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </availableFields>
@@ -117,11 +117,6 @@
         <isRequired>false</isRequired>
     </availableFields>
     <availableFields>
-        <field>copado__Git_Repository__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
         <field>copado__Has_Apex_Code__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
@@ -137,11 +132,6 @@
         <isRequired>false</isRequired>
     </availableFields>
     <availableFields>
-        <field>copado__Is_Bundle__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
         <field>LastModifiedById</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
@@ -153,11 +143,6 @@
     </availableFields>
     <availableFields>
         <field>copado__Last_Compliance_Scan_Date__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
-        <field>copado__Last_Promotion_Date__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </availableFields>
@@ -183,11 +168,6 @@
     </availableFields>
     <availableFields>
         <field>copado__Legal__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
-        <field>copado__Manual_Step_Required__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </availableFields>
@@ -333,11 +313,6 @@
     </availableFields>
     <availableFields>
         <field>copado__Triggers_Without_Coverage__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
-        <field>copado__US_Feature__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </availableFields>

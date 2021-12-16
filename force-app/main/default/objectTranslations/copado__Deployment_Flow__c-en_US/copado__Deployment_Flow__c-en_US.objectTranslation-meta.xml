@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Deployment Flow Layout</layout>
+        <sections>
+            <label><!-- Advanced Options --></label>
+            <section>Advanced Options</section>
+        </sections>
+        <sections>
+            <label><!-- Copado DX --></label>
+            <section>Copado DX</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Pipeline Layout V.17</layout>
+        <sections>
+            <label><!-- Advanced Options --></label>
+            <section>Advanced Options</section>
+        </sections>
+        <sections>
+            <label><!-- Copado DX --></label>
+            <section>Copado DX</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Clone with Environments --></label>
+        <name>copado__Clone_with_Environments</name>
+    </quickActions>
     <validationRules>
         <errorMessage><!-- A pipeline cannot have the same template for both Promote and Deploy --></errorMessage>
         <name>copado__Unique_Template_for_promote_and_deploy</name>

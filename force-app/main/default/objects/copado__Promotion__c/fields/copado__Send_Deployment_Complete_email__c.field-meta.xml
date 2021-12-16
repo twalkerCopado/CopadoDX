@@ -4,7 +4,7 @@
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <label>Notify When Complete</label>
+    <label>Send Deployment Complete email</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>
 </CustomField>

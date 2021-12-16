@@ -3,7 +3,7 @@
     <fullName>copado__Metadata_API_Name__c</fullName>
     <deprecated>false</deprecated>
     <externalId>false</externalId>
-    <label>File Name</label>
+    <label>Metadata API Name</label>
     <length>255</length>
     <required>false</required>
     <trackTrending>false</trackTrending>

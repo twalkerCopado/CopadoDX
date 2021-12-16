@@ -4,98 +4,16 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>actionNames</name>
-                    <valueList>
-                        <valueListItems>
-                            <value>Edit</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__MC_Commit_Changes</value>
-                            <visibilityRule>
-                                <criteria>
-                                    <leftValue>{!Record.copado__Platform__c}</leftValue>
-                                    <operator>NE</operator>
-                                    <rightValue>Salesforce</rightValue>
-                                </criteria>
-                            </visibilityRule>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Commit_Files</value>
-                            <visibilityRule>
-                                <criteria>
-                                    <leftValue>{!Record.copado__Platform__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Salesforce</rightValue>
-                                </criteria>
-                            </visibilityRule>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Open_Org</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Ready_for_Promotion</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Perform_Validation</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Commit_Data</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Submit</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Add_Metadata</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Apex_Test</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Run_Static_Code_Analysis</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Manage_Selenium_Tests</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Run_Compliance_Scan</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Pull_Request</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Create_Scratch_Org</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Copado_DX</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Select_Base_Branch</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Share</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Clone</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Delete</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>CustomButton.copado__User_Story__c.copado__Add_Apex_Tests</value>
-                        </valueListItems>
-                    </valueList>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>collapsed</name>
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>enableActionsConfiguration</name>
-                    <value>true</value>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>enableActionsInNative</name>
-                    <value>true</value>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideChatterActions</name>
@@ -309,32 +227,6 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>relatedListApiName</name>
-                    <value>copado__Tests__r</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListComponentOverride</name>
-                    <value>NONE</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>rowsToDisplay</name>
-                    <value>10</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>showActionBar</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer8</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>parentFieldApiName</name>
-                    <value>copado__User_Story__c.Id</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListApiName</name>
                     <value>ActivityHistories</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -350,7 +242,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer9</identifier>
+                <identifier>force_relatedListSingleContainer8</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-d2bad605-d0e5-4194-8f8f-aed9cab6ff80</name>
@@ -380,7 +272,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer10</identifier>
+                <identifier>force_relatedListSingleContainer9</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -406,7 +298,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer11</identifier>
+                <identifier>force_relatedListSingleContainer10</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-n1wggv8db6m</name>
@@ -520,16 +412,6 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>communicationId</name>
-                    <value>userStoryAlerts</value>
-                </componentInstanceProperties>
-                <componentName>copado:copadoAlertPlaceHolder</componentName>
-                <identifier>copadoAlertPlaceHolder</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-fd572bc8-2dec-4fc6-914b-ef9525b98e0a</value>
                 </componentInstanceProperties>
@@ -564,7 +446,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer12</identifier>
+                <identifier>force_relatedListSingleContainer11</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -590,7 +472,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer13</identifier>
+                <identifier>force_relatedListSingleContainer12</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-b4d2be91-f791-45c0-80fe-581b9bca7bc1</name>
@@ -656,7 +538,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer14</identifier>
+                <identifier>force_relatedListSingleContainer13</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-6de43cd1-ee42-4bd4-98e4-0a52c9e5a2c3</name>
